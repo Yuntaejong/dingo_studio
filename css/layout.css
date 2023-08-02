@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+/* 헤더 공통*/
+header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  left: 0; top: 0;
+  z-index: 100;
+}
+header:hover {
+  background: #fff;
+}
+.act {
+  background:#fff !important;
+}
+
+header nav {
+  width: 600px;
+  margin: -58px auto 0 auto;
+}
+
+header .gnb > li > a {
+  font-size: var(--t-size16);
+  color:#fff;
+}
+header .lang {
+  position: absolute; top: 20px; right:20%;
+}
+header i.fa-solid {
+  font-size: 24px;
+  color: #fff;
+}
+
+.video {background: #000;}
+/* company */
+
+#company {}
+
+/* media */
+#media {
+  width: 100%;
+  background: #000;
+}
+
+#media .media_wrap {
+    width: 100%;
+    border:3px 0 3px 0 solid #000;
+    overflow:hidden;
+}
+
+
+/* banner */
+.banner {width:100%;}
+.banner_wrap {
+  width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.banner_wrap img {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+}
