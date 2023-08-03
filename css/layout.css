@@ -31,8 +31,12 @@ header i.fa-solid {
   font-size: 24px;
   color: #fff;
 }
+/* video */
+.video {
+  background: #000;
+  position: relative;
+}
 
-.video {background: #000;}
 /* company */
 
 #company {}

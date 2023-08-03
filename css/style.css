@@ -64,6 +64,21 @@ header nav {}
   border-radius: 50%;
   z-index: 9;
 }
+.desc {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.7);
+  z-index: 10;
+  text-align: center;
+  width: 200px; height: 100px;
+  border-radius: 30px;
+  opacity: 0;
+}
+.desc p {
+  font-size: 14px;
+  line-height: 50px;
+}
 
 /* banner */
 .banner_wrap > img {
