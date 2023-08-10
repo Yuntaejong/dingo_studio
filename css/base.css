@@ -30,5 +30,6 @@ a {
 
 .d-flex {display:flex;}
 .jcsa {justify-content: space-around;}
+.jcsb {justify-content: space-between;}
 .tac {text-align: center;}
 .hidden {display:none;}
