@@ -70,7 +70,7 @@ $(document).ready(function(){
   
 
   gnb.click(function(){
-    let i = $(this).index()+2;
+    let i = $(this).index()+1;
     console.log(i); //2,3,4,5,6
 
     $('html, body').animate({scrollTop:$('main section').eq(i).offset().top-70},400, 'easeOutCubic');
