@@ -281,7 +281,6 @@ main {position: relative;}
   z-index: 9;
   top: 0;
   left: 0;
-  background: linear-gradient(to bottom,  rgba(34,34,34,1) 0%,rgba(34,34,34,0) 100%);
 }
 .header > * {
   position: relative;
@@ -298,6 +297,7 @@ hr.small {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  color:#fff;
 }
 .title {
   margin-bottom: 0;
@@ -348,6 +348,7 @@ hr.small {
 .featured-slider > li:nth-child(4) {
   transform: translate(-50%, -50%) rotate(270deg);
 }
+
 .image {
   width: 1200px;
   height: auto;
@@ -356,24 +357,25 @@ hr.small {
 .image > img {
   clip-path: url(#quarterMask);
 }
-#business nav {
-  position: absolute;
-  bottom: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100;
-  width: 100%;
+.image > video {
+  clip-path: url(#quarterMask);
 }
-#business nav .prev, #business nav .next {
+#business .prev, #business .next {
+  position: absolute;
   background-color: black;
   border-radius: 100px;
   padding: 0.25rem 0.5rem;
-  color: white;
+  color: #3b3b3b;
+  cursor: pointer;
+  font-size: 16px;
+  transition: .3s;
 }
-#business nav .prev {float: left;}
-#business nav .next {float: right;}
+#business .prev {right: 100%;}
+#business .next {left: 100%;}
 
-
+#business .prev:hover , #business .next:hover {
+  color:#fff;
+}
 
 /* recruit */
 #recruit {
