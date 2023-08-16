@@ -33,3 +33,5 @@ a {
 .jcsb {justify-content: space-between;}
 .tac {text-align: center;}
 .hidden {display:none;}
+
+::-webkit-scrollbar {display:none;}

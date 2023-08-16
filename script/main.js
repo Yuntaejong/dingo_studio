@@ -6,7 +6,7 @@ $(document).ready(function(){
   const desc = $('.media_wrap ul li > .desc')
 
   //next_btn을 클릭하면 top3가 상단으로 애니메이션되면서 올라오게 한다.\
-  $('.next_btn').click(function(){
+  $('#arrow').click(function(){
     //e.preventDefault();
 
     $('html, body').animate({scrollTop:$('#company').offset().top-70},500, 'easeOutQuint');
@@ -209,4 +209,8 @@ $(document).ready(function(){
   $('.prev').on('click', prevHandler);
 
   var square = '<svg x="0px" y="0px" width="1200px" height="600px" viewBox="0 0 1200 600"><rect x="0.002" y="0.499" width="1200" height="600"/></svg>'
+
+  
+
+
 });

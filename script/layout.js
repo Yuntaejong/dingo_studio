@@ -1,9 +1,6 @@
 $(document).ready(function(){
-  
 
   //변수 모음
-  let ch = $('.modal #ch');  //체크박스 변수
-
   let gnb = $('.gnb li'); //네비게이션 변수
 
   let t_mnu = $('.com_right a'); //탭바 변수
@@ -33,7 +30,7 @@ $(document).ready(function(){
   $('body').append(modal);
 
   //쿠키생성하기
-  
+  let ch = $('.modal #ch');  //체크박스 변수
 
   //현재 브라우저에 쿠키정보가 있는지 없는지 유무를 판단하여 모달이 나오지 않게함.
   if($.cookie('popup')=='none'){
@@ -128,13 +125,60 @@ $(document).ready(function(){
     return false;
   });
   
+  // recruit
+  $('.sup').hover(function(){
+    $('.sup i').fadeOut();
+    
+  });
 
 
   // 배너 랜덤 반복
   img_num = Math.floor(Math.random()*3)+1;
-  console.log(img_num);
+  // console.log(img_num);
   document.getElementById('change').src="./images/banner0"+img_num+".png";
 
+  $(window).scroll(function(){
+    let sPos = $(this).scrollTop();
+    console.log(sPos);
 
+    // 이미지
+    if(sPos>=3100){
+      $('#news .contents_wrap .n_contents1 img').animate({
+        'opacity':'1',
+      },1000);
+    }
 
+    if(sPos>=3400){
+      $('#news .contents_wrap .n_contents2 img').animate({
+        'opacity':'1',
+      },1000);
+    }
+
+    if(sPos>=3700){
+      $('#news .contents_wrap .n_contents3 img').animate({
+        'opacity':'1',
+      },1000);
+    }
+    // 텍스트
+    if(sPos>=3200){
+      function animateText() {
+      $('#news .contents_wrap .n_contents1 .n_title').addClass('fade-in');
+      }
+      animateText();
+    }
+
+    if(sPos>=3500){
+      function animateText() {
+      $('#news .contents_wrap .n_contents2 .n_title').addClass('fade-in');
+      }
+      animateText();
+    }
+
+    if(sPos>=3800){
+      function animateText() {
+      $('#news .contents_wrap .n_contents3 .n_title').addClass('fade-in');
+      }
+      animateText();
+    }
+  });
 });

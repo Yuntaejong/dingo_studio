@@ -366,6 +366,10 @@ hr.small {
 .image > img {
   clip-path: url(#quarterMask);
   z-index: 10;
+  transition: .5s;
+}
+.featured-slider > li.active > .image > img:hover {
+  transform:scale(1.1);
 }
 .image > video {
   clip-path: url(#quarterMask);
@@ -387,19 +391,401 @@ hr.small {
   color:#ff5656;
 }
 
+/* News */
+#news {
+  width: 100%;
+  height:100vh;
+  position: relative;
+  background: #fff;
+}
+#news h2 {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: bold;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 80px;
+}
+
+#news .contents_wrap {
+  width: 1400px;
+  height: 100%;
+  margin: 20px auto;
+  flex-direction: column;
+}
+#news .n_contents1,#news .n_contents2,#news .n_contents3 {
+  width: 100%;
+  height:30vh;
+  align-items: center;
+  margin:10px 0;
+  gap :50px;
+  overflow: hidden;
+}
+#news .n_contents1, #news .n_contents1 {
+  text-align: left;
+}
+#news .n_contents2 {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+#news img {
+  width: 430px; height: 230px;
+  opacity: 0;
+}
+#news .n_title{opacity: 0;}
+#news .n_title a {
+  font-size: 20px;
+  color:#333;
+}
+#news .n_title a:hover {
+  text-decoration: underline;
+}
+/* 텍스트 효과 */
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInAnimation 1s ease-in-out forwards;
+}
+
+
+/* #news arrow */
+#news .container {
+  align-items: center;
+  position: absolute;
+  bottom: 20px; left: 50%;
+  transform: translateX(-50%);
+}
+
+#news .container ul li {
+  margin: 0 0 24px;
+}
+
+#news .the-arrow {
+  width: 1px;
+  transition: all 0.2s;
+}
+#news .the-arrow.-left {
+  position: absolute;
+  top: 60%;
+  left: 0;
+}
+#news .the-arrow.-left > .shaft {
+  width: 0;
+  background-color: #333;
+}
+#news .the-arrow.-left > .shaft:before, .the-arrow.-left > .shaft:after {
+  width: 0;
+  background-color: #333;
+}
+#news .the-arrow.-left > .shaft:before {
+  transform: rotate(0);
+}
+#news .the-arrow.-left > .shaft:after {
+  transform: rotate(0);
+}
+#news .the-arrow.-right {
+  top: 3px;
+}
+#news .the-arrow.-right > .shaft {
+  width: 1px;
+  transition-delay: 0.2s;
+}
+#news .the-arrow.-right > .shaft:before, .the-arrow.-right > .shaft:after {
+  width: 8px;
+  transition-delay: 0.3s;
+  transition: all 0.5s;
+}
+#news .the-arrow.-right > .shaft:before {
+  transform: rotate(40deg);
+}
+#news .the-arrow.-right > .shaft:after {
+  transform: rotate(-40deg);
+}
+#news .the-arrow > .shaft {
+  background-color: #333;
+  display: block;
+  height: 1px;
+  position: relative;
+  transition: all 0.2s;
+  transition-delay: 0;
+  will-change: transform;
+}
+#news .the-arrow > .shaft:before, #news .the-arrow > .shaft:after {
+  background-color: #333;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.2s;
+  transition-delay: 0;
+}
+#news .the-arrow > .shaft:before {
+  transform-origin: top right;
+}
+#news .the-arrow > .shaft:after {
+  transform-origin: bottom right;
+}
+
+#news .animated-arrow {
+  display: inline-block;
+  color: #333;
+  font-size: 1.25em;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s;
+}
+#news .animated-arrow:hover {
+  color: #333;
+}
+#news .animated-arrow:hover > .the-arrow.-left > .shaft {
+  width: 64px;
+  transition-delay: 0.1s;
+  background-color: #333;
+}
+#news .animated-arrow:hover > .the-arrow.-left > .shaft:before, #news .animated-arrow:hover > .the-arrow.-left > .shaft:after {
+  width: 8px;
+  transition-delay: 0.1s;
+  background-color: #333;
+}
+
+#news .animated-arrow:hover > .the-arrow.-left > .shaft:before {
+  transform: rotate(40deg);
+}
+#news .animated-arrow:hover > .the-arrow.-left > .shaft:after {
+  transform: rotate(-40deg);
+}
+#news .animated-arrow:hover > .main {
+  transform: translateX(17px);
+  transform: translateX(80px);
+}
+#news .animated-arrow:hover > .main > .the-arrow.-right > .shaft {
+  width: 0;
+  transform: translateX(200%);
+  transition-delay: 0;
+}
+#news .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before, #news .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+  width: 0;
+  transition-delay: 0;
+  transition: all 0.1s;
+}
+#news .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before {
+  transform: rotate(0);
+}
+#news .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+  transform: rotate(0);
+}
+
+#news .animated-arrow:hover > .main > .text {
+  text-decoration: underline;
+}
+
+#news .animated-arrow > .main {
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+#news .animated-arrow > .main > .text {
+  margin: 0 16px 0 0;
+  line-height: 1;
+  color:#333;
+  display:block;
+  width: 50px;
+}
+#news .animated-arrow > .main > .the-arrow {
+  position: relative;
+}
+
 /* recruit */
 #recruit {
   width: 100%;
-  height:100vh;
-  background: #6ee9ff;
+  height:50vh;
+  background: #000;
+  position: relative;
+  margin: 0 auto;
+}
+.r_wrap {
+  width: 1200px;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;top: 50%;
+  transform: translate(-50%,-50%);
+  gap: 20px;
+}
+.r_wrap img {
+  width: 350px;
+}
+.r_message h3 {
+  color:#fff;
+  font-size: 32px;
+  font-weight: bold;line-height: 40px;
+  margin: 80px 0 20px 0;
+}
+.r_message p {
+  font-size: 18px;
+  line-height: 24px;
+  color:#fff;
 }
 
-/* album */
-#album {
-  width: 100%;
-  height:100vh;
-  background: #6ee9ff;
+
+/*  arrow */
+
+#recruit .container {
+  align-items: center;
+  margin-top:40px;
 }
+
+#recruit .container ul li {
+  margin: 0 0 24px;
+}
+
+#recruit .the-arrow {
+  width: 1px;
+  transition: all 0.2s;
+}
+#recruit .the-arrow.-left {
+  position: absolute;
+  top: 60%;
+  left: 0;
+}
+#recruit .the-arrow.-left > .shaft {
+  width: 0;
+  background-color: #eee;
+}
+#recruit .the-arrow.-left > .shaft:before, #recruit .the-arrow.-left > .shaft:after {
+  width: 0;
+  background-color: #eee;
+}
+#recruit .the-arrow.-left > .shaft:before {
+  transform: rotate(0);
+}
+#recruit .the-arrow.-left > .shaft:after {
+  transform: rotate(0);
+}
+#recruit .the-arrow.-right {
+  top: 3px;
+}
+#recruit .the-arrow.-right > .shaft {
+  width: 1px;
+  transition-delay: 0.2s;
+}
+#recruit .the-arrow.-right > .shaft:before, #recruit .the-arrow.-right > .shaft:after {
+  width: 8px;
+  transition-delay: 0.3s;
+  transition: all 0.5s;
+}
+#recruit .the-arrow.-right > .shaft:before {
+  transform: rotate(40deg);
+}
+#recruit .the-arrow.-right > .shaft:after {
+  transform: rotate(-40deg);
+}
+#recruit .the-arrow > .shaft {
+  background-color: #eee;
+  display: block;
+  height: 1px;
+  position: relative;
+  transition: all 0.2s;
+  transition-delay: 0;
+  will-change: transform;
+}
+#recruit .the-arrow > .shaft:before, #recruit .the-arrow > .shaft:after {
+  background-color: #eee;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.2s;
+  transition-delay: 0;
+}
+#recruit .the-arrow > .shaft:before {
+  transform-origin: top right;
+}
+#recruit .the-arrow > .shaft:after {
+  transform-origin: bottom right;
+}
+
+#recruit .animated-arrow {
+  display: inline-block;
+  color: #4c4c4c;
+  font-size: 1.25em;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s;
+}
+#recruit .animated-arrow:hover {
+  color: #808080;
+}
+#recruit .animated-arrow:hover > .the-arrow.-left > .shaft {
+  width: 64px;
+  transition-delay: 0.1s;
+  background-color: #808080;
+}
+#recruit .animated-arrow:hover > .the-arrow.-left > .shaft:before, .animated-arrow:hover > .the-arrow.-left > .shaft:after {
+  width: 8px;
+  transition-delay: 0.1s;
+  background-color: #808080;
+}
+#recruit .animated-arrow:hover > .the-arrow.-left > .shaft:before {
+  transform: rotate(40deg);
+}
+#recruit .animated-arrow:hover > .the-arrow.-left > .shaft:after {
+  transform: rotate(-40deg);
+}
+#recruit .animated-arrow:hover > .main {
+  transform: translateX(17px);
+  transform: translateX(80px);
+}
+#recruit .animated-arrow:hover > .main > .the-arrow.-right > .shaft {
+  width: 0;
+  transform: translateX(200%);
+  transition-delay: 0;
+}
+#recruit .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before, #recruit .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+  width: 0;
+  transition-delay: 0;
+  transition: all 0.1s;
+}
+#recruit .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before {
+  transform: rotate(0);
+}
+#recruit .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+  transform: rotate(0);
+}
+#recruit .animated-arrow:hover > .main > .text {
+  text-decoration: underline;
+}
+
+#recruit .animated-arrow > .main {
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+#recruit .animated-arrow > .main > .text {
+  margin: 0 16px 0 0;
+  line-height: 1;
+  color:#eee;
+}
+#recruit .animated-arrow > .main > .the-arrow {
+  position: relative;
+}
+
+
 
 
 /* banner */
@@ -413,6 +799,7 @@ hr.small {
   width: 1000px;
   height: 100%;
   margin: 0 auto;
+  display:block;
 }
 
 /* 푸터 */
@@ -434,10 +821,26 @@ footer {
   padding:5px 0;
 }
 .f_lnb ul li {
-  margin:0 5px;
+  padding-right:10px;
 }
 .f_lnb ul li a{
   color:#d4d4d4;
+  position: relative;
+}
+.f_lnb ul li a::before {
+  content:'|';
+  display:block;
+  width: 1px;
+  height: 6px;
+  color:#eee;
+  position : absolute;
+  top:1px; right:-5px;
+}
+.f_lnb ul li:last-child a::before {
+  display:none;
+}
+.f_lnb ul li a strong {
+  color:#fff;
 }
 .sns {
   padding-top:15px;

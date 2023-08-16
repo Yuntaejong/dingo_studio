@@ -64,8 +64,8 @@
         <li><a href="#" title="company">company</a></li>
         <li><a href="#" title="media">media</a></li>
         <li><a href="#" title="business">business</a></li>
+        <li><a href="#" title="Album">News</a></li>
         <li><a href="#" title="recruit">recruit</a></li>
-        <li><a href="#" title="company">Album</a></li>
       </ul>
     </nav>
 
@@ -92,7 +92,9 @@
           </div>
         </div>
       </div>
-      <a href="#" title="아래로 이동" class="next_btn">아래로 이동</a>
+      <div id="arrow">
+        <a href="#">Scroll<span></span></a>
+      </div>
     </section>
 
     <section id="company">
@@ -362,12 +364,75 @@
       </div>
     </section>
 
-    <section id="recruit">
-      <h2>recruit</h2>
+    <section id="news">
+      <h2>Dingo의 소식!</h2>
+      <div class="contents_wrap d-flex">
+        <div class="n_contents1 d-flex">
+          <img src="./images/news_01.png" alt="뉴스1" >
+          <p class="n_title"><a href="https://www.topstarnews.net/news/articleView.html?idxno=14611046" title="성시경 킬링보이스 천만뷰 돌파" target="_blank">성시경 '킬링보이스',천만 뷰 돌파···"제안오면 2탄 준비"</a></p>
+        </div>
+        <div class="n_contents2 d-flex">
+          <img src="./images/news_02.png" alt="뉴스2">
+          <p class="n_title"><a href="https://www.sedaily.com/NewsView/22MIDKA6AG" title="MZ세대 사로잡은 킬링벌스" target="_blank">힙합 넘어 MZ세대 사로잡은 유튜브 '킬링벌스'···"세대 아우르는 콘텐츠 목표"</a></p>
+        </div>
+        <div class="n_contents3 d-flex">
+          <img src="./images/news_03.png" alt="뉴스3">
+          <p class="n_title"><a href="https://www.starnewskorea.com/stview.php?no=2022092315363551002" title="아이유, 딩고 킬링보이스 5000만뷰" target="_blank">아이유, 딩고 '킬링보이스'···,5000만 뷰 돌파</a></p>
+        </div>
+      </div>
+      <div class="container d-flex">
+        <ul>
+          <li>
+            <a class="animated-arrow" href="https://google.com">
+              <span class="the-arrow -left">
+                <span class="shaft"></span>
+              </span>
+              <span class="main">
+                <span class="text">
+                  더보기
+                </span>
+                <span class="the-arrow -right">
+                  <span class="shaft"></span>
+                </span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <section id="album">
-      <h2>album</h2>
+
+    <section id="recruit">
+      <h2 class="hidden">recruit</h2>
+      <div class="r_wrap d-flex">
+        <img src="./images/recruit_logo.jpg" alt="">
+        <div class="r_message">
+          <h3>Dingo Crew</h3>
+          <p>딩고는 가치 있는 경험을 발굴하고 발전시켜 전 세계에 소개하는 일을 합니다.<br>
+            콘텐츠에 대한 높은 이해도와 창의적인 아이디어를 바탕으로 글로벌 디지털 콘텐츠 트렌드를<br>
+            리드할 딩고 크루를 기다립니다.
+          </p>
+          <div class="container d-flex">
+            <ul>
+              <li>
+                <a class="animated-arrow" href="https://google.com">
+                  <span class="the-arrow -left">
+                    <span class="shaft"></span>
+                  </span>
+                  <span class="main">
+                    <span class="text">
+                      지원하기
+                    </span>
+                    <span class="the-arrow -right">
+                      <span class="shaft"></span>
+                    </span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <article class="banner">
@@ -406,7 +471,7 @@
 
       <nav class="sns">
         <a href="#" title="youtube바로가기"><img src="./images/youtube.png" alt="유투브"></a>
-        <a href="#" title="insta바로가기"><img src="./images/insta.png" alt="인스타"></a>
+        <a href="#" title="instagram바로가기"><img src="./images/insta.png" alt="인스타"></a>
       </nav>
     </div> <!-- //End .f_inner-->
   </footer>
