@@ -139,7 +139,7 @@ $(document).ready(function(){
 
   $(window).scroll(function(){
     let sPos = $(this).scrollTop();
-    console.log(sPos);
+    // console.log(sPos);
 
     // 이미지
     if(sPos>=3100){

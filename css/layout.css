@@ -151,7 +151,7 @@ main {position: relative;}
   color:#fff;
   box-sizing: border-box;
   padding:5px 20px;
-  z-index: 10px;
+  z-index: 10;
 }
 .choice {
   background: #f00 !important;
@@ -396,7 +396,7 @@ hr.small {
   width: 100%;
   height:100vh;
   position: relative;
-  background: #fff;
+  background: #000000;
 }
 #news h2 {
   font-size: 40px;
@@ -419,7 +419,7 @@ hr.small {
   height:30vh;
   align-items: center;
   margin:10px 0;
-  gap :50px;
+  gap :20px;
   overflow: hidden;
 }
 #news .n_contents1, #news .n_contents1 {
@@ -436,7 +436,7 @@ hr.small {
 #news .n_title{opacity: 0;}
 #news .n_title a {
   font-size: 20px;
-  color:#333;
+  color:#ffffff;
 }
 #news .n_title a:hover {
   text-decoration: underline;
@@ -466,6 +466,7 @@ hr.small {
   position: absolute;
   bottom: 20px; left: 50%;
   transform: translateX(-50%);
+  padding:10px;
 }
 
 #news .container ul li {
@@ -519,7 +520,7 @@ hr.small {
   height: 1px;
   position: relative;
   transition: all 0.2s;
-  transition-delay: 0;
+  /* transition-delay: 0; */
   will-change: transform;
 }
 #news .the-arrow > .shaft:before, #news .the-arrow > .shaft:after {
@@ -531,7 +532,7 @@ hr.small {
   top: 0;
   right: 0;
   transition: all 0.2s;
-  transition-delay: 0;
+  /* transition-delay: 0; */
 }
 #news .the-arrow > .shaft:before {
   transform-origin: top right;
@@ -575,11 +576,11 @@ hr.small {
 #news .animated-arrow:hover > .main > .the-arrow.-right > .shaft {
   width: 0;
   transform: translateX(200%);
-  transition-delay: 0;
+  /* transition-delay: 0; */
 }
 #news .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before, #news .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
   width: 0;
-  transition-delay: 0;
+  /* transition-delay: 0; */
   transition: all 0.1s;
 }
 #news .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before {
@@ -646,6 +647,7 @@ hr.small {
 #recruit .container {
   align-items: center;
   margin-top:40px;
+  padding:10px;
 }
 
 #recruit .container ul li {
@@ -699,7 +701,7 @@ hr.small {
   height: 1px;
   position: relative;
   transition: all 0.2s;
-  transition-delay: 0;
+  /* transition-delay: 0; */
   will-change: transform;
 }
 #recruit .the-arrow > .shaft:before, #recruit .the-arrow > .shaft:after {
@@ -754,11 +756,11 @@ hr.small {
 #recruit .animated-arrow:hover > .main > .the-arrow.-right > .shaft {
   width: 0;
   transform: translateX(200%);
-  transition-delay: 0;
+  /* transition-delay: 0; */
 }
 #recruit .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before, #recruit .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
   width: 0;
-  transition-delay: 0;
+  /* transition-delay: 0; */
   transition: all 0.1s;
 }
 #recruit .animated-arrow:hover > .main > .the-arrow.-right > .shaft:before {
