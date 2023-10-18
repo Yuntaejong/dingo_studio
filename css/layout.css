@@ -433,6 +433,7 @@ hr.small {
   cursor: pointer;
   font-size: 16px;
   transition: .3s;
+  bottom: -200px;
 }
 #business .prev {right: 100%;}
 #business .next {left: 100%;}

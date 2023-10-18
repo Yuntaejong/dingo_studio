@@ -64,7 +64,7 @@
         <li><a href="#" title="company">company</a></li>
         <li><a href="#" title="media">media</a></li>
         <li><a href="#" title="business">business</a></li>
-        <li><a href="#" title="Album">News</a></li>
+        <li><a href="#" title="News">News</a></li>
         <li><a href="#" title="recruit">recruit</a></li>
       </ul>
     </nav>
@@ -78,18 +78,23 @@
   <main>
     <section class="video">
       <h2 class="hidden">메인비디오</h2>
-      <img src="./images/img-wave.png" alt="">
       <div id="smooth-content">
-        <div class="intro1">
-        </div>
-        <div class="intro2">
-          <h2></h2>
-        </div>
-        <div class="intro3">
-          <img src="./images/img-pad.png" alt="">
+        <div class="intro1 wheel">
           <div class="pad_wrap">
             <iframe src="https://player.vimeo.com/video/816444282?autoplay=1&loop=1&background=1"></iframe>
           </div>
+        </div>
+        <div class="intro2 wheel">
+          <div class="pad_wrapper">
+            <img src="./images/img-pad.png" alt="" class="pad">
+            <div class="pad_wrap">
+              <iframe src="https://player.vimeo.com/video/816444282?autoplay=1&loop=1&background=1"></iframe>
+            </div>
+            <h2>Global Contents Media Dingo</h2>
+          </div>
+        </div>
+        <div class="intro3 wheel">
+          <h2>모든 컬쳐를 아우르는 힙하고 트랜디한 세상의 창!</h2>
         </div>
       </div>
       <div id="arrow">
@@ -97,7 +102,7 @@
       </div>
     </section>
 
-    <section id="company">
+    <section id="company" class="wheel">
       <h2 class="hidden">COMPANY</h2>
       <div class="d-flex company_wrap">
         <div class="com_left">
@@ -162,7 +167,7 @@
       </div>
     </section>
 
-    <section id="media">
+    <section id="media" class="wheel">
       <h2>이달의 Dingo!</h2>
       <i class="fa-regular fa-circle-pause" id="p_btn"></i>
       <div class="v_box">
@@ -296,10 +301,9 @@
       </div>
     </section>
 
-    <section id="business">
+    <section id="business" class="wheel">
       <img src="./images/star.gif" alt="">
-      <h2>business</h2>
-
+      <h2 class="hidden">business</h2>
       <div class="circle">
         <svg class="svg-mask" width="1200px" height="600px" viewBox="0 0 1200 600">
         <defs>
@@ -361,25 +365,26 @@
           <div class="prev">Prev</div>
           <div class="next">Next</div>
         <div id="pentitle" style="display: none;" data-title="29/52 - Circular Slider"></div>
-      </div>
+      </div> <!--//End .circle-->
+      <div class="typing">Dingo!&nbsp;&nbsp;<h2 class="t_trans"></h2></div>
     </section>
 
-    <section id="news">
+    <section id="news" class="wheel">
       <h2>Dingo의 소식!</h2>
       <div class="contents_wrap d-flex">
         <div class="n_contents1 d-flex">
           <img src="./images/news_01.png" alt="뉴스1" >
-          <p class="n_title"><a href="https://www.topstarnews.net/news/articleView.html?idxno=14611046" title="성시경 킬링보이스 천만뷰 돌파" target="_blank">성시경 '킬링보이스',천만 뷰 돌파···"제안오면 2탄 준비"</a></p>
+          <p class="n_title"><a href="https://www.topstarnews.net/news/articleView.html?idxno=14611046" title="성시경 킬링보이스 천만뷰 돌파" target="_blank">성시경 '킬링보이스'천만 뷰 돌파···<br>"제안오면 2탄 준비"</a></p>
         </div>
         <div class="n_contents2 d-flex">
           <img src="./images/news_02.png" alt="뉴스2">
-          <p class="n_title"><a href="https://www.sedaily.com/NewsView/22MIDKA6AG" title="MZ세대 사로잡은 킬링벌스" target="_blank">힙합 넘어 MZ세대 사로잡은 유튜브 '킬링벌스'···"세대 아우르는 콘텐츠 목표"</a></p>
+          <p class="n_title"><a href="https://www.sedaily.com/NewsView/22MIDKA6AG" title="MZ세대 사로잡은 킬링벌스" target="_blank">힙합 넘어 MZ세대 사로잡은 유튜브 '킬링벌스'···<br>"세대 아우르는 콘텐츠 목표"</a></p>
         </div>
         <div class="n_contents3 d-flex">
           <img src="./images/news_03.png" alt="뉴스3">
-          <p class="n_title"><a href="https://www.starnewskorea.com/stview.php?no=2022092315363551002" title="아이유, 딩고 킬링보이스 5000만뷰" target="_blank">아이유, 딩고 '킬링보이스'···,5000만 뷰 돌파</a></p>
+          <p class="n_title"><a href="https://www.starnewskorea.com/stview.php?no=2022092315363551002" title="아이유, 딩고 킬링보이스 5000만뷰" target="_blank">아이유, 딩고 '킬링보이스'···<br>5000만 뷰 돌파</a></p>
         </div>
-      </div>
+      </div> <!--//End .contents_wrap-->
       <div class="container d-flex">
         <ul>
           <li>
@@ -398,11 +403,12 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div> <!--//End .container-->
+      <div class='typing'>Language! <h1 class="text"></h1></div>
     </section>
 
 
-    <section id="recruit">
+    <section id="recruit" class="wheel">
       <h2 class="hidden">recruit</h2>
       <div class="r_wrap d-flex">
         <img src="./images/recruit_logo.jpg" alt="">
