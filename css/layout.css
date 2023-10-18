@@ -765,7 +765,6 @@ hr.small {
   top: 0;
   right: 0;
   transition: all 0.2s;
-  transition-delay: 0;
 }
 #recruit .the-arrow > .shaft:before {
   transform-origin: top right;
