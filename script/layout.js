@@ -51,16 +51,47 @@ $(document).ready(function(){
     closeModal();
   });
 
+  // 일정 스크롤 이동
+  // 변수 설정
+  var $html =$('html');
+  var page = 1;
+  var lastPage = $('.wheel').length;
+  console.log(lastPage);
+
+  $html.animate({scrollTop:0},10);
+
+  // 기본 이벤트 제거
+  window.addEventListener('wheel',function(e){
+    e.preventDefault();
+  },{passive:false});
+
+  // 휠 이벤트 
+  $(window).on('wheel',function(e){
+    
+    if($html.is(":animated")) return;
+    if(e.originalEvent.deltaY >0){
+      if(page== lastPage) return;
+      page++;
+    } else if (e.originalEvent.deltaY < 0){
+      if(page==1) return;
+      page--;
+    }
+    var posTop = (page-1)*$(window).height();
+    $html.animate({scrollTop:posTop});
+  });
+
+
+
 
   // 헤더 이벤트
   $('header').hover(function(){
     $('header').addClass('act');
     $('header .gnb > li > a, header i.fa-solid').css('color','#333');
-    $('header .gnb').animate({'margin':'0 -60px'},300);
+    $('header .gnb').stop().animate({'margin':'0 -60px'},300);
   },function(){
     $('header').removeClass('act');
     $('header .gnb > li > a, header i.fa-solid').css('color','#fff');
-    $('header .gnb').animate({'margin':'0'},300);
+    $('header .gnb').stop().animate({'margin':'0'},300);
   });
 
   // 네비게이션
@@ -75,9 +106,25 @@ $(document).ready(function(){
   });
 
 
-  // media 슬라이드
-  // 변수 선언
-  
+  //video 슬라이드
+  $(window).scroll(function(){
+    let sPos=Math.ceil((($(this).scrollTop()/$(this).height())*100));
+    if(sPos>=100 && sPos <=140){
+      function animateText() {
+      $('.video > #smooth-content > .intro2 > .pad_wrapper').addClass('fade-in');
+      }
+      animateText();
+    } 
+    if(sPos>=200 && sPos<=240){
+      function animateText() {
+      $('.video > #smooth-content > .intro3 h2').addClass('fade-in');
+      }
+      animateText();
+    }
+  });
+
+
+
 
   // 자동으로 움직이는 함수
   function moveLeft(){
@@ -138,47 +185,40 @@ $(document).ready(function(){
   document.getElementById('change').src="./images/banner0"+img_num+".png";
 
   $(window).scroll(function(){
-    let sPos = $(this).scrollTop();
-    // console.log(sPos);
+    let sPos=Math.ceil((($(this).scrollTop()/$(this).height())*100));
+    console.log(sPos);
 
     // 이미지
-    if(sPos>=3100){
-      $('#news .contents_wrap .n_contents1 img').animate({
-        'opacity':'1',
-      },1000);
+    if(sPos>=600){
+      $('#news .contents_wrap .n_contents1 img').animate({'opacity':'1',},500);
     }
 
-    if(sPos>=3400){
-      $('#news .contents_wrap .n_contents2 img').animate({
-        'opacity':'1',
-      },1000);
+    if(sPos>=600){$('#news .contents_wrap .n_contents2 img').animate({'opacity':'1',},700);
     }
 
-    if(sPos>=3700){
-      $('#news .contents_wrap .n_contents3 img').animate({
-        'opacity':'1',
-      },1000);
+    if(sPos>=600){
+      $('#news .contents_wrap .n_contents3 img').animate({'opacity':'1',},900);
     }
     // 텍스트
-    if(sPos>=3200){
+    if(sPos>=600){
       function animateText() {
       $('#news .contents_wrap .n_contents1 .n_title').addClass('fade-in');
       }
-      animateText();
+      animateText(300);
     }
 
-    if(sPos>=3500){
+    if(sPos>=600){
       function animateText() {
       $('#news .contents_wrap .n_contents2 .n_title').addClass('fade-in');
       }
-      animateText();
+      animateText(500);
     }
 
-    if(sPos>=3800){
+    if(sPos>=600){
       function animateText() {
       $('#news .contents_wrap .n_contents3 .n_title').addClass('fade-in');
       }
-      animateText();
+      animateText(700);
     }
   });
 });
