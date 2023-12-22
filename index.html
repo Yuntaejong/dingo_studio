@@ -1,489 +1,512 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dingo 딩고</title>
-  <!-- 파비콘 -->
-  <link rel="shortcut icon" type="image/x-icon" href="./images/logo.svg" >
-  <!-- 초기화 -->
-  <link rel="stylesheet" href="./css/reset.css" type="text/css">
-  <!-- 기본, 공통서식 -->
-  <link rel="stylesheet" href="./css/base.css" type="text/css">
-  <!-- 레이아웃 서식 -->
-  <link rel="stylesheet" href="./css/layout.css" type="text/css">
-  <!-- 컨텐츠 내용 서식 -->
-  <link rel="stylesheet" href="./css/style.css" type="text/css">
-  <!-- 스와이퍼 슬라이드 서식 -->
-  <link rel="stylesheet" href="./css/swiper.css" type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dingo 딩고</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="./images/logo.svg" />
+    <!-- 초기화 -->
+    <link rel="stylesheet" href="./css/reset.css" type="text/css" />
+    <!-- 기본, 공통서식 -->
+    <link rel="stylesheet" href="./css/base.css" type="text/css" />
+    <!-- 레이아웃 서식 -->
+    <link rel="stylesheet" href="./css/layout.css" type="text/css" />
+    <!-- 컨텐츠 내용 서식 -->
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <!-- 스와이퍼 슬라이드 서식 -->
+    <link rel="stylesheet" href="./css/swiper.css" type="text/css" />
 
-  <!-- 아이콘 폰트 서식 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" type="text/css">
-  
-  <!-- css3속성 사용 시 접두사 자동으로 붙여주는 스크립트 소스 -->
-  <link rel="stylesheet" href="./script/prefixfree.min.js">
+    <!-- 아이콘 폰트 서식 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" type="text/css" />
 
-  <!-- 제이쿼리 라이브러리 -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- css3속성 사용 시 접두사 자동으로 붙여주는 스크립트 소스 -->
+    <link rel="stylesheet" href="./script/prefixfree.min.js" />
 
-  <!-- 제이쿼리 UI 라이브러리 -->
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
-  <!-- 제이쿼리 쿠키 파일 -->
-  <script src="./script/jquery.cookie.js"></script>
+    <!-- 제이쿼리 UI 라이브러리 -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
-  <!-- 제이쿼리 공통 스크립트 -->
-  <script src="./script/layout.js"></script>
+    <!-- 제이쿼리 쿠키 파일 -->
+    <script src="./script/jquery.cookie.js"></script>
 
-  <!-- 제이쿼리 컨텐츠 -->
-  <script src="./script/main.js"></script>
+    <!-- 제이쿼리 공통 스크립트 -->
+    <script src="./script/layout.js"></script>
 
-  <!-- 원형 슬라이드 플러그인/css -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.1/foundation.min.css"> -->
-  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/base/snipcart.min.css">
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/152635/ThrowPropsPlugin.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/utils/Draggable.min.js"></script>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/152635/CSSPlugin.js"></script>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/152635/codepen-ga.js"></script>
+    <!-- 제이쿼리 컨텐츠 -->
+    <script src="./script/main.js"></script>
 
-</head>
-<body>
-  <!-- 헤더영역 시작 -->
-  <header>
-    <h1>
-      <a href="index.html" title="메인페이지 바로가기">
-        <img src="./images/logo.svg" alt="상단로고">
-      </a>
-    </h1>
+    <!-- 원형 슬라이드 플러그인/css -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.1/foundation.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/base/snipcart.min.css" />
 
-    <!-- 상단 네비게이션 -->
-    <nav>
-      <ul class="gnb d-flex jcsa tac">
-        <li><a href="#" title="company">company</a></li>
-        <li><a href="#" title="media">media</a></li>
-        <li><a href="#" title="business">business</a></li>
-        <li><a href="#" title="News">News</a></li>
-        <li><a href="#" title="recruit">recruit</a></li>
-      </ul>
-    </nav>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/152635/ThrowPropsPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/utils/Draggable.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/152635/CSSPlugin.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/152635/codepen-ga.js"></script>
+  </head>
+  <body>
+    <!-- 헤더영역 시작 -->
+    <header>
+      <h1>
+        <a href="index.html" title="메인페이지 바로가기">
+          <img src="./images/logo.svg" alt="상단로고" />
+        </a>
+      </h1>
 
-    <div class="lang">
-      <i class="fa-solid fa-globe"></i>
-    </div>
-  </header>
+      <!-- 상단 네비게이션 -->
+      <nav>
+        <ul class="gnb d-flex jcsa tac">
+          <li><a href="#" title="company">company</a></li>
+          <li><a href="#" title="media">media</a></li>
+          <li><a href="#" title="business">business</a></li>
+          <li><a href="#" title="News">News</a></li>
+          <li><a href="#" title="recruit">recruit</a></li>
+        </ul>
+      </nav>
 
-  <!-- 메인영역 시작 -->
-  <main>
-    <section class="video">
-      <h2 class="hidden">메인비디오</h2>
-      <div id="smooth-content">
-        <div class="intro1 wheel">
-          <div class="pad_wrap">
-            <iframe src="https://player.vimeo.com/video/816444282?autoplay=1&loop=1&background=1"></iframe>
-          </div>
-        </div>
-        <div class="intro2 wheel">
-          <div class="pad_wrapper">
-            <img src="./images/img-pad.png" alt="" class="pad">
+      <div class="lang">
+        <i class="fa-solid fa-globe"></i>
+      </div>
+    </header>
+
+    <!-- 메인영역 시작 -->
+    <main>
+      <section class="video">
+        <h2 class="hidden">메인비디오</h2>
+        <div id="smooth-content">
+          <div class="intro1 wheel">
             <div class="pad_wrap">
               <iframe src="https://player.vimeo.com/video/816444282?autoplay=1&loop=1&background=1"></iframe>
             </div>
-            <h2>Global Contents Media Dingo</h2>
+          </div>
+          <div class="intro2 wheel">
+            <div class="pad_wrapper">
+              <img src="./images/img-pad.png" alt="" class="pad" />
+              <div class="pad_wrap">
+                <iframe src="https://player.vimeo.com/video/816444282?autoplay=1&loop=1&background=1"></iframe>
+              </div>
+              <h2>Global Contents Media Dingo</h2>
+            </div>
+          </div>
+          <div class="intro3 wheel">
+            <h2>모든 컬쳐를 아우르는 힙하고 트랜디한 세상의 창!</h2>
           </div>
         </div>
-        <div class="intro3 wheel">
-          <h2>모든 컬쳐를 아우르는 힙하고 트랜디한 세상의 창!</h2>
+        <div id="arrow">
+          <a href="#" title="아래로 이동">Scroll<span></span></a>
         </div>
-      </div>
-      <div id="arrow">
-        <a href="#" title="아래로 이동">Scroll<span></span></a>
-      </div>
-    </section>
+      </section>
 
-    <section id="company" class="wheel">
-      <h2 class="hidden">COMPANY</h2>
-      <div class="d-flex company_wrap">
-        <div class="com_left">
-          <p>변화하는 미디어 시대에 가장 최적화된 콘텐츠를 만드는 크리에이티브 그룹</p>
-          <p>Global No.1<br>
-            Digital Content Studio</p>
-        </div>
-        <div class="com_right">
-          <ul class="d-flex">
-            <li>
-              <a href="#" title="Who We Are" class=choice>Who We Are</a>
-              <div class="d-flex c01">
-                <img src="./images/com_img1.jpg" alt="이미지1">
-                <div>
-                  <h3>Who We Are</h3>
-                  <p>메이크어스는 독보적인 IP 라인업 및 제작 전문성을 <br>
-                    갖춘 글로벌 디지털 콘텐츠 스튜디오입니다.</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="#" title="Mission">Mission</a>
-              <div class="d-flex c02">
-                <div>
-                  <h3>Mission</h3>
-                  <p>가치 있는 경험을 발굴하고 발전시켜 전 세계에<br>
-                    소개하는 메이크어스는 디지털 미디어 사업을 통해<br>
-                    라이프스타일 트렌드를 선도하고 있습니다.</p>
-                </div>
-                <img src="./images/com_img2.jpg" alt="이미지2">
-              </div>
-            </li>
-          </ul>
-        </div> <!--//End .com_right-->
-      </div>  <!--//End .com_company_wrap-->
-      <div class="main_count">
-        <div class="inner_count">
-          <ul class="d-flex jcsb">
-            <li>
-              <h3 class="int1">
-                <span>&nbsp;</span>
-                Million
-              </h3>
-              <p>Total Subscribers</p>
-            </li>
-            <li>
-              <h3 class="int2">
-                <span>&nbsp;</span>
-                Million
-              </h3>
-              <p>Total Hours Watched</p>
-            </li>
-            <li>
-              <h3 class="int3">
-                <span>&nbsp;</span>
-                +
-              </h3>
-              <p>Digtal Content</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="media" class="wheel">
-      <h2>이달의 Dingo!</h2>
-      <i class="fa-regular fa-circle-pause" id="p_btn"></i>
-      <div class="v_box">
-        <video muted autoplay>
-          <source src="./video/motion_01.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="media_wrap">
-        <ul class="d-flex">
-          <li>
-            <a href="#" title="ETA">
-              <img src="./images/album01.jpg" alt="앨범1">
-              <span class="hole"></span>
-            </a>
-            <div class="desc">
-              <p>아티스트 : New Jeans</p>
-              <p>곡정보 : ETA</p>
-            </div>
-          </li>
-          <li>
-            <a href="#" title="Steal The Show">
-              <img src="./images/album02.jpg" alt="앨범2">
-              <span class="hole"></span>
-            </a>
-            <div class="desc">
-              <p>아티스트 : Lauv</p>
-              <p>곡정보 : Steal The Show</p>
-            </div>
-          </li>
-          <li>
-            <a href="#" title="SEVEN(feat. Latto)">
-              <img src="./images/album03.jpg" alt="앨범3">
-              <span class="hole"></span>
-            </a>
-            <div class="desc">
-              <p>아티스트 : 정국(BTS)</p>
-              <p>곡정보 : SEVEN(feat. Latto)</p>
-            </div>
-          </li>
-          <li>
-            <a href="#" title="ISTJ">
-              <img src="./images/album04.jpg" alt="앨범4">
-              <span class="hole"></span>
-            </a>
-            <div class="desc">
-              <p>아티스트 : NCT DREAM</p>
-              <p>곡정보 : ISTJ</p>
-            </div>
-          </li>
-          <li>
-            <a href="#" title="New Emotions">
-              <img src="./images/album05.jpg" alt="앨범5">
-              <span class="hole"></span>
-            </a>
-            <div class="desc">
-              <p>아티스트 : 인피니트(INFINITE)</p>
-              <p>곡정보 : New Emotions</p>
-            </div>
-          </li>
-          <li>
-            <a href="#" title="Underwater">
-              <img src="./images/album06.jpg" alt="앨범6">
-              <span class="hole"></span>
-            </a>
-            <div class="desc">
-              <p>아티스트 : 권은비</p>
-              <p>곡정보 : Underwater</p>
-            </div>
-          </li>
-          <li>
-            <a href="#" title="Summer (Feat. BE'O (비오))">
-              <img src="./images/album07.jpg" alt="앨범7">
-              <span class="hole"></span>
-            </a>
-            <div class="desc">
-              <p>아티스트 : Paul Blanco</p>
-              <p>곡정보 : Summer (Feat. BE'O (비오))</p>
-            </div>
-          </li>
-          <li>
-            <a href="#" title="한 페이지가 될 수 있게">
-              <img src="./images/album08.jpg" alt="앨범8">
-              <span class="hole"></span>
-            </a>
-            <div class="desc">
-              <p>아티스트 : DAY6(데이식스)</p>
-              <p>곡정보 : 한 페이지가 될 수 있게</p>
-            </div>
-          </li>
-          <li>
-            <a href="#" title="헤어지자 말해요">
-              <img src="./images/album09.jpg" alt="앨범9">
-              <span class="hole"></span>
-            </a>
-            <div class="desc">
-              <p>아티스트 : 박재정</p>
-              <p>곡정보 : 헤어지자 말해요</p>
-            </div>
-          </li>
-          <li>
-            <a href="#" title="여행 Again(Feat. Cautious Clay)">
-              <img src="./images/album10.jpg" alt="앨범10">
-              <span class="hole"></span>
-            </a>
-            <div class="desc">
-              <p>아티스트 : 빈지노(Beenzino)</p>
-              <p>곡정보 : 여행 Again(Feat. Cautious Clay)</p>
-            </div>
-          </li>
-          <li>
-            <a href="#" title="심(心)">
-              <img src="./images/album11.jpg" alt="앨범11">
-              <span class="hole"></span>
-            </a>
-            <div class="desc">
-              <p>아티스트 : DK(디셈버)</p>
-              <p>곡정보 : 심(心)</p>
-            </div>
-          </li>
-          <li>
-            <a href="#" title="사막에서 꽃을 피우듯">
-              <img src="./images/album12.jpg" alt="앨범12">
-              <span class="hole"></span>
-            </a>
-            <div class="desc">
-              <p>아티스트 : 우디(Woody)</p>
-              <p>곡정보 : 사막에서 꽃을 피우듯</p>
-            </div>
-          </li>
-        </ul>  
-      </div>
-    </section>
-
-    <section id="business" class="wheel">
-      <img src="./images/star.gif" alt="">
-      <h2 class="hidden">business</h2>
-      <div class="circle">
-        <svg class="svg-mask" width="1200px" height="600px" viewBox="0 0 1200 600">
-        <defs>
-          <clipPath id="quarterMask">
-            <path d="M299.001,26.649L0,325.65c330.267,330.268,865.736,330.268,1196.004,0L897.003,26.649
-          C731.868,191.784,464.136,191.784,299.001,26.649z"/>
-          </clipPath>
-        </defs>
-        </svg>
-        <div class="header"></div>
-        <div class="content">
-          <ul class="featured-slider" id="wheel">
-            <li class="active">
-              <div class="image">
-                <div class="details">
-                  <h3 class="title">Dingo Music</h3>
-                  <hr class="small">
-                  <h4 class="roles">킬링보이스 / 세로라이브 / 이슬라이브 등 컨텐츠</h4>
-                  <a href="https://www.youtube.com/@DingoMusic" title="딩고뮤직" class="button" target="_blank">바로가기<i class="fas fa-chevron-right"></i></a>
-                </div>
-                <img src="./images/silde1.jpg" alt="딩고뮤직">
-              </div>
-            </li>
-            <li>
-              <div class="image">
-                <div class="details">
-                  <h3 class="title">Dingo Freestyle</h3>
-                  <hr class="small">
-                  <h4 class="roles">Rising Verse / DF STAGE / Killing Verse 등 컨텐츠</h4>
-                  <a href="https://www.youtube.com/@dingofreestyle" title="딩고프리스타일" class="button" target="_blank">바로가기<i class="fas fa-chevron-right"></i></a>
-                </div>
-                <img src="./images/silde2.jpg" alt="딩고프리스타일">
-              </div>
-            </li>
-            <li>
-              <div class="image">
-                <div class="details">
-                  <h3 class="title">Dingo Studio</h3>
-                  <hr class="small">
-                  <h4 class="roles">멀티벌스 / 궁시렁벌스 / 서준맘의 기절요리 등 컨텐츠</h4>
-                  <a href="https://www.youtube.com/@dingostudio" title="딩고스튜디오" class="button" target="_blank">바로가기<i class="fas fa-chevron-right"></i></a>
-                </div>
-                <img src="./images/silde3.jpg" alt="딩고스튜디오">
-              </div>
-            </li>
-            <li>
-              <div class="image">
-                <div class="details">
-                  <h3 class="title">Dingo Story</h3>
-                  <hr class="small">
-                  <h4 class="roles">수고했어, 오늘도 / 썸남.ZIP / 이별택시 등 컨텐츠</h4>
-                  <a href="https://www.youtube.com/@dingostory" title="딩고스토리" class="button" target="_blank">바로가기<i class="fas fa-chevron-right"></i></a>
-                </div>
-                <img src="./images/silde4.jpg" alt="딩고스토리">
-              </div>
-            </li>
-          </ul>
-        </div> <!--//End .featured-slider-->
-          <div class="prev">Prev</div>
-          <div class="next">Next</div>
-        <div id="pentitle" style="display: none;" data-title="29/52 - Circular Slider"></div>
-      </div> <!--//End .circle-->
-      <div class="typing">Dingo!&nbsp;&nbsp;<h2 class="t_trans">&nbsp;</h2></div>
-    </section>
-
-    <section id="news" class="wheel">
-      <h2>Dingo의 소식!</h2>
-      <div class="contents_wrap d-flex">
-        <div class="n_contents1 d-flex">
-          <img src="./images/news_01.png" alt="뉴스1" >
-          <p class="n_title"><a href="https://www.topstarnews.net/news/articleView.html?idxno=14611046" title="성시경 킬링보이스 천만뷰 돌파" target="_blank">성시경 '킬링보이스'천만 뷰 돌파···<br>"제안오면 2탄 준비"</a></p>
-        </div>
-        <div class="n_contents2 d-flex">
-          <img src="./images/news_02.png" alt="뉴스2">
-          <p class="n_title"><a href="https://www.sedaily.com/NewsView/22MIDKA6AG" title="MZ세대 사로잡은 킬링벌스" target="_blank">힙합 넘어 MZ세대 사로잡은 유튜브 '킬링벌스'···<br>"세대 아우르는 콘텐츠 목표"</a></p>
-        </div>
-        <div class="n_contents3 d-flex">
-          <img src="./images/news_03.png" alt="뉴스3">
-          <p class="n_title"><a href="https://www.starnewskorea.com/stview.php?no=2022092315363551002" title="아이유, 딩고 킬링보이스 5000만뷰" target="_blank">아이유, 딩고 '킬링보이스'···<br>5000만 뷰 돌파</a></p>
-        </div>
-      </div> <!--//End .contents_wrap-->
-      <div class="container d-flex">
-        <ul>
-          <li>
-            <a class="animated-arrow" href="https://google.com">
-              <span class="the-arrow -left">
-                <span class="shaft"></span>
-              </span>
-              <span class="main">
-                <span class="text">
-                  더보기
-                </span>
-                <span class="the-arrow -right">
-                  <span class="shaft"></span>
-                </span>
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div> <!--//End .container-->
-      <div class="typing">Language! <h2 class="text">&nbsp;</h2></div>
-    </section>
-
-
-    <section id="recruit" class="wheel">
-      <h2 class="hidden">recruit</h2>
-      <div class="r_wrap d-flex">
-        <img src="./images/recruit_logo.jpg" alt="로고">
-        <div class="r_message">
-          <h3>Dingo Crew</h3>
-          <p>딩고는 가치 있는 경험을 발굴하고 발전시켜 전 세계에 소개하는 일을 합니다.<br>
-            콘텐츠에 대한 높은 이해도와 창의적인 아이디어를 바탕으로 글로벌 디지털 콘텐츠 트렌드를<br>
-            리드할 딩고 크루를 기다립니다.
-          </p>
-          <div class="container d-flex">
-            <ul>
+      <section id="company" class="wheel">
+        <h2 class="hidden">COMPANY</h2>
+        <div class="d-flex company_wrap">
+          <div class="com_left">
+            <p>변화하는 미디어 시대에 가장 최적화된 콘텐츠를 만드는 크리에이티브 그룹</p>
+            <p>
+              Global No.1<br />
+              Digital Content Studio
+            </p>
+          </div>
+          <div class="com_right">
+            <ul class="d-flex">
               <li>
-                <a class="animated-arrow" href="https://google.com">
-                  <span class="the-arrow -left">
-                    <span class="shaft"></span>
-                  </span>
-                  <span class="main">
-                    <span class="text">
-                      지원하기
-                    </span>
-                    <span class="the-arrow -right">
-                      <span class="shaft"></span>
-                    </span>
-                  </span>
-                </a>
+                <a href="#" title="Who We Are" class="choice">Who We Are</a>
+                <div class="d-flex c01">
+                  <img src="./images/com_img1.jpg" alt="이미지1" />
+                  <div>
+                    <h3>Who We Are</h3>
+                    <p>
+                      메이크어스는 독보적인 IP 라인업 및 제작 전문성을 <br />
+                      갖춘 글로벌 디지털 콘텐츠 스튜디오입니다.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#" title="Mission">Mission</a>
+                <div class="d-flex c02">
+                  <div>
+                    <h3>Mission</h3>
+                    <p>
+                      가치 있는 경험을 발굴하고 발전시켜 전 세계에<br />
+                      소개하는 메이크어스는 디지털 미디어 사업을 통해<br />
+                      라이프스타일 트렌드를 선도하고 있습니다.
+                    </p>
+                  </div>
+                  <img src="./images/com_img2.jpg" alt="이미지2" />
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!--//End .com_right-->
+        </div>
+        <!--//End .com_company_wrap-->
+        <div class="main_count">
+          <div class="inner_count">
+            <ul class="d-flex jcsb">
+              <li>
+                <h3 class="int1">
+                  <span>&nbsp;</span>
+                  Million
+                </h3>
+                <p>Total Subscribers</p>
+              </li>
+              <li>
+                <h3 class="int2">
+                  <span>&nbsp;</span>
+                  Million
+                </h3>
+                <p>Total Hours Watched</p>
+              </li>
+              <li>
+                <h3 class="int3">
+                  <span>&nbsp;</span>
+                  +
+                </h3>
+                <p>Digtal Content</p>
               </li>
             </ul>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <article class="banner">
-      <h2 class="hidden">banner</h2>
-      <div class="banner_wrap">
-        <img src="./images/banner01.png" alt="배너"  id="change">
-      </div>
-    </article>
-  </main>
-
-  <!-- 푸터영역 시작 -->
-  <footer>
-    <div class="f_inner d-flex jcsa">
-      <h2>
-        <a href="index.html" title="하단로고">
-          <img src="./images/ft_logo.svg" alt="하단로고">
-        </a>
-      </h2>
-      <div class="f_center d-flex">
-        <address>
-          <p>
-            <span>서울 강남구 봉은사로18길 36</span>
-            <span>|</span>
-            <span>contact@makeus.com</span>
-          </p>
-        </address>
-        <p class="copy">Copyright&copy; 2022 Makeus. All rights reserved.</p>
-  
-        <nav class="f_lnb">
+      <section id="media" class="wheel">
+        <h2>이달의 Dingo!</h2>
+        <i class="fa-regular fa-circle-pause" id="p_btn"></i>
+        <div class="v_box">
+          <video muted autoplay>
+            <source src="./video/motion_01.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="media_wrap">
           <ul class="d-flex">
-            <li><a href="#" title="IR & News">IR & News</a></li>
-            <li><a href="#" title="Contact">Contact</a></li>
-            <li><a href="#" title="개인정보처리방침"><strong>개인정보처리방침</strong></a></li>
+            <li>
+              <a href="#" title="ETA">
+                <img src="./images/album01.jpg" alt="앨범1" />
+                <span class="hole"></span>
+              </a>
+              <div class="desc">
+                <p>아티스트 : New Jeans</p>
+                <p>곡정보 : ETA</p>
+              </div>
+            </li>
+            <li>
+              <a href="#" title="Steal The Show">
+                <img src="./images/album02.jpg" alt="앨범2" />
+                <span class="hole"></span>
+              </a>
+              <div class="desc">
+                <p>아티스트 : Lauv</p>
+                <p>곡정보 : Steal The Show</p>
+              </div>
+            </li>
+            <li>
+              <a href="#" title="SEVEN(feat. Latto)">
+                <img src="./images/album03.jpg" alt="앨범3" />
+                <span class="hole"></span>
+              </a>
+              <div class="desc">
+                <p>아티스트 : 정국(BTS)</p>
+                <p>곡정보 : SEVEN(feat. Latto)</p>
+              </div>
+            </li>
+            <li>
+              <a href="#" title="ISTJ">
+                <img src="./images/album04.jpg" alt="앨범4" />
+                <span class="hole"></span>
+              </a>
+              <div class="desc">
+                <p>아티스트 : NCT DREAM</p>
+                <p>곡정보 : ISTJ</p>
+              </div>
+            </li>
+            <li>
+              <a href="#" title="New Emotions">
+                <img src="./images/album05.jpg" alt="앨범5" />
+                <span class="hole"></span>
+              </a>
+              <div class="desc">
+                <p>아티스트 : 인피니트(INFINITE)</p>
+                <p>곡정보 : New Emotions</p>
+              </div>
+            </li>
+            <li>
+              <a href="#" title="Underwater">
+                <img src="./images/album06.jpg" alt="앨범6" />
+                <span class="hole"></span>
+              </a>
+              <div class="desc">
+                <p>아티스트 : 권은비</p>
+                <p>곡정보 : Underwater</p>
+              </div>
+            </li>
+            <li>
+              <a href="#" title="Summer (Feat. BE'O (비오))">
+                <img src="./images/album07.jpg" alt="앨범7" />
+                <span class="hole"></span>
+              </a>
+              <div class="desc">
+                <p>아티스트 : Paul Blanco</p>
+                <p>곡정보 : Summer (Feat. BE'O (비오))</p>
+              </div>
+            </li>
+            <li>
+              <a href="#" title="한 페이지가 될 수 있게">
+                <img src="./images/album08.jpg" alt="앨범8" />
+                <span class="hole"></span>
+              </a>
+              <div class="desc">
+                <p>아티스트 : DAY6(데이식스)</p>
+                <p>곡정보 : 한 페이지가 될 수 있게</p>
+              </div>
+            </li>
+            <li>
+              <a href="#" title="헤어지자 말해요">
+                <img src="./images/album09.jpg" alt="앨범9" />
+                <span class="hole"></span>
+              </a>
+              <div class="desc">
+                <p>아티스트 : 박재정</p>
+                <p>곡정보 : 헤어지자 말해요</p>
+              </div>
+            </li>
+            <li>
+              <a href="#" title="여행 Again(Feat. Cautious Clay)">
+                <img src="./images/album10.jpg" alt="앨범10" />
+                <span class="hole"></span>
+              </a>
+              <div class="desc">
+                <p>아티스트 : 빈지노(Beenzino)</p>
+                <p>곡정보 : 여행 Again(Feat. Cautious Clay)</p>
+              </div>
+            </li>
+            <li>
+              <a href="#" title="심(心)">
+                <img src="./images/album11.jpg" alt="앨범11" />
+                <span class="hole"></span>
+              </a>
+              <div class="desc">
+                <p>아티스트 : DK(디셈버)</p>
+                <p>곡정보 : 심(心)</p>
+              </div>
+            </li>
+            <li>
+              <a href="#" title="사막에서 꽃을 피우듯">
+                <img src="./images/album12.jpg" alt="앨범12" />
+                <span class="hole"></span>
+              </a>
+              <div class="desc">
+                <p>아티스트 : 우디(Woody)</p>
+                <p>곡정보 : 사막에서 꽃을 피우듯</p>
+              </div>
+            </li>
           </ul>
+        </div>
+      </section>
+
+      <section id="business" class="wheel">
+        <img src="./images/star.gif" alt="" />
+        <h2 class="hidden">business</h2>
+        <div class="circle">
+          <svg class="svg-mask" width="1200px" height="600px" viewBox="0 0 1200 600">
+            <defs>
+              <clippath id="quarterMask">
+                <path
+                  d="M299.001,26.649L0,325.65c330.267,330.268,865.736,330.268,1196.004,0L897.003,26.649
+          C731.868,191.784,464.136,191.784,299.001,26.649z" />
+              </clippath>
+            </defs>
+          </svg>
+          <div class="header"></div>
+          <div class="content">
+            <ul class="featured-slider" id="wheel">
+              <li class="active">
+                <div class="image">
+                  <div class="details">
+                    <h3 class="title">Dingo Music</h3>
+                    <hr class="small" />
+                    <h4 class="roles">킬링보이스 / 세로라이브 / 이슬라이브 등 컨텐츠</h4>
+                    <a href="https://www.youtube.com/@DingoMusic" title="딩고뮤직" class="button" target="_blank">바로가기<i class="fas fa-chevron-right"></i></a>
+                  </div>
+                  <img src="./images/silde1.jpg" alt="딩고뮤직" />
+                </div>
+              </li>
+              <li>
+                <div class="image">
+                  <div class="details">
+                    <h3 class="title">Dingo Freestyle</h3>
+                    <hr class="small" />
+                    <h4 class="roles">Rising Verse / DF STAGE / Killing Verse 등 컨텐츠</h4>
+                    <a href="https://www.youtube.com/@dingofreestyle" title="딩고프리스타일" class="button" target="_blank">바로가기<i class="fas fa-chevron-right"></i></a>
+                  </div>
+                  <img src="./images/silde2.jpg" alt="딩고프리스타일" />
+                </div>
+              </li>
+              <li>
+                <div class="image">
+                  <div class="details">
+                    <h3 class="title">Dingo Studio</h3>
+                    <hr class="small" />
+                    <h4 class="roles">멀티벌스 / 궁시렁벌스 / 서준맘의 기절요리 등 컨텐츠</h4>
+                    <a href="https://www.youtube.com/@dingostudio" title="딩고스튜디오" class="button" target="_blank">바로가기<i class="fas fa-chevron-right"></i></a>
+                  </div>
+                  <img src="./images/silde3.jpg" alt="딩고스튜디오" />
+                </div>
+              </li>
+              <li>
+                <div class="image">
+                  <div class="details">
+                    <h3 class="title">Dingo Story</h3>
+                    <hr class="small" />
+                    <h4 class="roles">수고했어, 오늘도 / 썸남.ZIP / 이별택시 등 컨텐츠</h4>
+                    <a href="https://www.youtube.com/@dingostory" title="딩고스토리" class="button" target="_blank">바로가기<i class="fas fa-chevron-right"></i></a>
+                  </div>
+                  <img src="./images/silde4.jpg" alt="딩고스토리" />
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!--//End .featured-slider-->
+          <div class="prev">Prev</div>
+          <div class="next">Next</div>
+          <div id="pentitle" style="display: none" data-title="29/52 - Circular Slider"></div>
+        </div>
+        <!--//End .circle-->
+        <div class="typing">
+          Dingo!&nbsp;&nbsp;
+          <h2 class="t_trans">&nbsp;</h2>
+        </div>
+      </section>
+
+      <section id="news" class="wheel">
+        <h2>Dingo의 소식!</h2>
+        <div class="contents_wrap d-flex">
+          <div class="n_contents1 d-flex">
+            <img src="./images/news_01.png" alt="뉴스1" />
+            <p class="n_title">
+              <a href="https://www.topstarnews.net/news/articleView.html?idxno=14611046" title="성시경 킬링보이스 천만뷰 돌파" target="_blank">성시경 '킬링보이스'천만 뷰 돌파···<br />"제안오면 2탄 준비"</a>
+            </p>
+          </div>
+          <div class="n_contents2 d-flex">
+            <img src="./images/news_02.png" alt="뉴스2" />
+            <p class="n_title">
+              <a href="https://www.sedaily.com/NewsView/22MIDKA6AG" title="MZ세대 사로잡은 킬링벌스" target="_blank">힙합 넘어 MZ세대 사로잡은 유튜브 '킬링벌스'···<br />"세대 아우르는 콘텐츠 목표"</a>
+            </p>
+          </div>
+          <div class="n_contents3 d-flex">
+            <img src="./images/news_03.png" alt="뉴스3" />
+            <p class="n_title">
+              <a href="https://www.starnewskorea.com/stview.php?no=2022092315363551002" title="아이유, 딩고 킬링보이스 5000만뷰" target="_blank">아이유, 딩고 '킬링보이스'···<br />5000만 뷰 돌파</a>
+            </p>
+          </div>
+        </div>
+        <!--//End .contents_wrap-->
+        <div class="container d-flex">
+          <ul>
+            <li>
+              <a class="animated-arrow" href="https://google.com">
+                <span class="the-arrow -left">
+                  <span class="shaft"></span>
+                </span>
+                <span class="main">
+                  <span class="text"> 더보기 </span>
+                  <span class="the-arrow -right">
+                    <span class="shaft"></span>
+                  </span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--//End .container-->
+        <div class="typing">
+          Language!
+          <h2 class="text">&nbsp;</h2>
+        </div>
+      </section>
+
+      <section id="recruit" class="wheel">
+        <h2 class="hidden">recruit</h2>
+        <div class="r_wrap d-flex">
+          <img src="./images/recruit_logo.jpg" alt="로고" />
+          <div class="r_message">
+            <h3>Dingo Crew</h3>
+            <p>
+              딩고는 가치 있는 경험을 발굴하고 발전시켜 전 세계에 소개하는 일을 합니다.<br />
+              콘텐츠에 대한 높은 이해도와 창의적인 아이디어를 바탕으로 글로벌 디지털 콘텐츠 트렌드를<br />
+              리드할 딩고 크루를 기다립니다.
+            </p>
+            <div class="container d-flex">
+              <ul>
+                <li>
+                  <a class="animated-arrow" href="https://google.com">
+                    <span class="the-arrow -left">
+                      <span class="shaft"></span>
+                    </span>
+                    <span class="main">
+                      <span class="text"> 지원하기 </span>
+                      <span class="the-arrow -right">
+                        <span class="shaft"></span>
+                      </span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <article class="banner">
+        <h2 class="hidden">banner</h2>
+        <div class="banner_wrap">
+          <img src="./images/banner01.png" alt="배너" id="change" />
+        </div>
+      </article>
+    </main>
+
+    <!-- 푸터영역 시작 -->
+    <footer>
+      <div class="f_inner d-flex jcsa">
+        <h2>
+          <a href="index.html" title="하단로고">
+            <img src="./images/ft_logo.svg" alt="하단로고" />
+          </a>
+        </h2>
+        <div class="f_center d-flex">
+          <address>
+            <p>
+              <span>서울 강남구 봉은사로18길 36</span>
+              <span>|</span>
+              <span>contact@makeus.com</span>
+            </p>
+          </address>
+          <p class="copy">Copyright&copy; 2022 Makeus. All rights reserved.</p>
+
+          <nav class="f_lnb">
+            <ul class="d-flex">
+              <li><a href="#" title="IR & News">IR &amp; News</a></li>
+              <li><a href="#" title="Contact">Contact</a></li>
+              <li>
+                <a href="#" title="개인정보처리방침"><strong>개인정보처리방침</strong></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <nav class="sns">
+          <a href="#" title="youtube바로가기"><img src="./images/youtube.png" alt="유투브" /></a>
+          <a href="#" title="instagram바로가기"><img src="./images/insta.png" alt="인스타" /></a>
         </nav>
       </div>
+      <!-- //End .f_inner-->
+    </footer>
 
-      <nav class="sns">
-        <a href="#" title="youtube바로가기"><img src="./images/youtube.png" alt="유투브"></a>
-        <a href="#" title="instagram바로가기"><img src="./images/insta.png" alt="인스타"></a>
-      </nav>
-    </div> <!-- //End .f_inner-->
-  </footer>
-
-  <!-- swiper slide script-->
-  <script src="./script/swiper.js"></script>
-</body>
+    <!-- swiper slide script-->
+    <script src="./script/swiper.js"></script>
+  </body>
 </html>
