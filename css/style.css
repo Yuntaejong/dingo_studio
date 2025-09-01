@@ -84,7 +84,7 @@
 	padding-top:20px;
 	color:rgba(255,255,255,.7)
 }
-
+.inner_count ul {display:flex; justify-content: space-between;}
 
 /* media */
 .section5 h2 {
