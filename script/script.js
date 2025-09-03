@@ -16,8 +16,13 @@ $(document).ready(function () {
 
 			if (index === 3 && direction == 'down') {
 				startCountingAnimation();
+				$('header').css('background-color', '#000');
 			} else if (index === 5 && direction == 'up') {
 				restartCountingAnimation();
+			}
+
+			if (index === 4 && direction == 'up') {
+				$('header').css('background-color', 'transparent');
 			}
 
 		},
@@ -69,6 +74,30 @@ $(document).ready(function () {
 
 	$('.modal #c_btn').click(function () {
 		closeModal();
+	});
+
+
+	// navigation mobile
+	const hamburger = document.querySelector('.hamburger');
+	const navContainer = document.querySelector('.nav-container');
+	const navLinks = document.querySelectorAll('.gnb a');
+
+	// 햄버거 버튼 클릭 이벤트
+	hamburger.addEventListener('click', () => {
+		hamburger.classList.toggle('active');
+		navContainer.classList.toggle('active');
+		
+		// body 스크롤 방지 (선택사항)
+		document.body.classList.toggle('no-scroll');
+	});
+
+	// 네비게이션 링크 클릭시 메뉴 닫기
+	navLinks.forEach(link => {
+		link.addEventListener('click', () => {
+			hamburger.classList.remove('active');
+			navContainer.classList.remove('active');
+			document.body.classList.remove('no-scroll');
+		});
 	});
 
 	// 배너 랜덤 반복
@@ -254,7 +283,7 @@ $(document).ready(function () {
 	});
 
 	const swiper = new Swiper('.swiper', {
-		slidesPerView: "5",
+		slidesPerView: "1",
 		loop:true,
 		observeParents:true,
 		observe:true,
@@ -263,6 +292,24 @@ $(document).ready(function () {
 			disableOnInteraction: false
 		},
 		speed: 7000,
+		breakpoints: {
+			1600: {
+				slidesPerView: "5",
+				spaceBetween:"40",
+			},
+			1024: {
+				slidesPerView: "4",
+				spaceBetween:"30",
+			},
+			768: {
+				slidesPerView: "3",
+				spaceBetween:"20",
+			},
+			500: {
+				slidesPerView: "2",
+				spaceBetween:"10",
+			}
+		}
 	});
 
 });

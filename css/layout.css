@@ -52,11 +52,65 @@ nav {min-width: 600px;}
 .gnb > li > a {font-size: 16px;color:#fff;}
 .lang i {font-size: 24px; color: #fff;}
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 102;
+}
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
 /* header hover */
 header:hover {background-color: #fff; box-shadow: 0 2px 10px 0 #00000050;}
 header:hover .gnb {gap:80px;}
 header:hover .gnb > li > a {color:#333;}
 header:hover .lang i {color:#333;}
+
+@media screen and (max-width:1024px) {
+	header:hover {background-color: transparent; box-shadow:none;}
+	header:hover .gnb {gap:40px;}
+	header:hover .gnb > li > a {color:#fff;}
+	header:hover .lang i {color:#fff;}
+}
+
+@media screen and (max-width:768px) {
+	header {justify-content: space-between; padding:0 20px;}
+	.lang {display: none;}
+	.nav-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.85);
+        transition: right 0.3s ease;
+        z-index: 101;
+		display:flex;
+		align-items: center;
+    }
+    .nav-container.active {right: 0;}
+	.hamburger {display: flex;}
+	.hamburger.active span:nth-child(1) {transform: rotate(-45deg) translate(-6px, 8px);}
+    .hamburger.active span:nth-child(2) {opacity: 0;}
+    .hamburger.active span:nth-child(3) {transform: rotate(45deg) translate(-5px, -7px);}
+    .hamburger.active span {background-color: white;}
+
+	.nav-container.active .gnb {
+		flex-direction: column;
+		height: 70%;
+		margin: auto;
+	}
+	.nav-container.active .gnb a {font-size: 24px;}
+}
 
 #wrap {
 	position: relative;
@@ -70,13 +124,12 @@ header:hover .lang i {color:#333;}
 .intro h2 {color:#fff;}
 .intro1 iframe {width: 100%; height: 100%; transform: scale(1.2); pointer-events: none;}
 
-.intro2 {display:flex; align-items: center; justify-content: center; gap:100px;}
+.intro2 {display:flex; align-items: center; justify-content: center; gap:100px; padding:0 20px;}
 .intro2 .padWrap { background: url('../images/img-pad.png') no-repeat center / 100% 100%; width: 810px; height: 480px; display: flex; align-items: center; justify-content: center;}
 .intro .padWrap > div {width: 100%; height: 100%; padding:20px; overflow: hidden;}
 .intro2 iframe {width: 100%; height: 100%; overflow: hidden; border-radius: 20px;}
-
-
 .intro3 > h2 { position: absolute; left: 100px; top: 50%; transform: translateY(-50%);}
+
 #arrow {
 	position: absolute;
 	left: 50%; bottom: 0px;

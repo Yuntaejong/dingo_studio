@@ -84,7 +84,7 @@
 	padding-top:20px;
 	color:rgba(255,255,255,.7)
 }
-.inner_count ul {display:flex; justify-content: space-between;}
+.inner_count ul {display:flex; justify-content: space-between; padding:0 20px;}
 
 /* media */
 .section5 h2 {
@@ -555,4 +555,26 @@ hr.small {
 	position: relative;
 }
 
-/* 푸터 영역 */
+
+@media screen and (max-width:1024px) {
+	nav {min-width: unset;}
+
+	/* section2 */
+	.intro2 {padding:0 20px; gap:5%; flex-direction: column;}
+	.intro2 .padWrap { width:80%; height: auto; aspect-ratio: 12/7;}
+
+	/* section3 */
+	.intro3 {padding:0 20px; display: flex; align-items: center; justify-content: center;}
+	.intro3 h2 {position: relative; top:0; left:0; text-align: center; line-height: 1.2;}
+
+	/* section4 */
+	.company-wrap {flex-direction: column; justify-content: center; padding:0 20px; gap:40px;}
+	.company-wrap > div {width: 100%;}
+	.company-desc p:first-child {font-size: 20px; margin-bottom: 10px;}
+	.company-desc p:last-child {font-size: 32px; line-height:1.1;}
+
+	.main_count {height: 120px; display: flex; align-items: center;}
+	.inner_count h3 {font-size: 32px; padding-top: 0px;}
+	.inner_count p {font-size: 16px; padding-top: 10px;}
+	.inner_count ul {justify-content: center; gap:5%;}
+}
