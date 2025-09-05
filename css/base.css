@@ -33,8 +33,7 @@ img {
 	object-fit: cover;
 	object-position: center;
 }
-
-::-webkit-scrollbar {display:none;}
+.no-scroll {overflow: hidden;}
 
 h2 {font-size: 48px; font-weight:600; color:#fff;}
 h3 {font-size: 40px; font-weight:500;}
